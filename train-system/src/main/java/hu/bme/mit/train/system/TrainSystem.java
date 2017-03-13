@@ -25,4 +25,16 @@ public class TrainSystem {
 		return user;
 	}
 
+	public static void main(String[] args){
+		TrainSystem system = new TrainSystem();
+		TrainController controller = system.getController();
+		TrainSensor sensor = system.getSensor();
+		TrainUser user = system.getUser();
+
+		sensor.overrideSpeedLimit(50);
+
+
+		user.overrideJoystickPosition(4);
+	}
+
 }
